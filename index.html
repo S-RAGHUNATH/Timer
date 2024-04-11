@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- to make fontawesome icons to work in our app, use cdn js link -->
+</head>
+
+<body>
+    <div class="timer">
+        <div class="controls">
+            <input id="duration" value="3" />
+            <div>
+                <button id="startTime"><i class="fas fa-play"></i></button>
+                <button id="stopTime"><i class="fas fa-pause"></i></button>
+            </div>
+        </div>
+        <svg class="dial"> <!-- an SVG element has height and width to be mentioned-->
+            <circle r="190" cx="200" cy="200" fill="transparent" stroke="blue" 
+                    stroke-width="10" transform="rotate(-90 200 200)"> <!-- 
+                    r:radius of circle, cx, cy:centre point i.e centreX centreY, fill:centre of circle, 
+                    stroke:border, stroke-width:width of border, 
+                    stroke-dasharray:segments of border and value based on 2*PI*r
+                    stroke-dashoffset:gap between two edges of stroke-dasharray. Give -ve value to get in 
+                    counterclockwise direction 
+                    transform=rotate(): to rotate the whole circle 
+                 
+                    stroke-dasharray="625" stroke-dashoffset="-80">>>these values  are handled in js file as they are 
+                    dependent on given radius 
+                -->
+            </circle>
+        </svg>
+    </div>
+
+    <script src="timer.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
